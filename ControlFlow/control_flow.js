@@ -53,3 +53,20 @@ console.log("User Category:", userCategory);
 let isAuthenticated = true;
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 console.log("Authentication Status: ", authenticationStatus);
+
+// Practice: Dietary services
+let person = "Enrolled Member";
+let dietaryStatus;
+
+if (person === "Employee") {
+    dietaryStatus = "Access to Dietary Services";
+} else if (person === "Enrolled Member") {
+    dietaryStatus = "Access to Dietary Services & One-on-one interaction with a dietician";
+} else if (person === "Subscriber") {
+    dietaryStatus = "Partial access to Dietary Services";
+} else {
+    dietaryStatus = "Please subscribe to avail this facility";
+}
+
+console.log("Dietary option: " + dietaryStatus);
+
