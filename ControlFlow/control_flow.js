@@ -47,3 +47,5 @@ switch (userType) {
         userCategory = "Unknown";
 }
 
+console.log("User Category:", userCategory);
+
