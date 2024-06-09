@@ -1,5 +1,4 @@
 let count = 0; // Initialize count to 0
-let isReset = false;
 
 function displayCount() {
     // to display the count in the HTML
@@ -18,15 +17,13 @@ function checkCountValue() {
     } else if (count === 20) {
         alert("Your post gained 20 followers! Keep it up!")
     }
-    if (isReset === true) {
-        alert("Your follower count has been reset!")
-    }
+
 }
 
 function reset() {
     count = 0;
     displayCount();
-    isReset = true;
+    alert("Your followers count has been reset!");
 }
 
 
