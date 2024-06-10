@@ -10,7 +10,10 @@ const feedback = document.getElementById('feedbackText').value;
 
 // submit function
 function submitFeedback() {
+    
+    // pop up message
     alert('Thank you for your valuable feedback.');
+
     // show
     document.getElementById('userName').innerHTML = username;
     document.getElementById('userAge').innerHTML = age;
@@ -22,6 +25,7 @@ function submitFeedback() {
 
     // display div element to be visible only after the user clicks on the submit button
     document.getElementById('userInfo').style.display = 'block';
+
 }
 
 // implement button click to submit feedback
