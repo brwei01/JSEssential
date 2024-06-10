@@ -1,5 +1,16 @@
 function submitFeedback() {
     alert('Thank you for your valuable feedback.');
+    // show
+    document.getElementById('userName').innerHTML = username;
+    document.getElementById('userAge').innerHTML = age;
+    document.getElementById('userEmail').innerHTML = email;
+    document.getElementById('userJob').innerHTML = job;
+    document.getElementById('userDesignation').innerHTML = designation;
+    document.getElementById('userProductChoice').innerHTML = productType;
+    document.getElementById('userFeedback').innerHTML = feedback;
+
+    // display div element to be visible only after the user clicks on the submit button
+    document.getElementById('userInfo').style.display = 'block';
 }
 
 // fetch
@@ -14,18 +25,6 @@ const feedback = document.getElementById('feedbackText').value;
 const submitButton = document.getElementById('submitBtn');
 submitButton.onclick = submitFeedback;
 
-
-// show
-document.getElementById('userName').innerHTML = username;
-document.getElementById('userAge').innerHTML = age;
-document.getElementById('userEmail').innerHTML = email;
-document.getElementById('userJob').innerHTML = job;
-document.getElementById('userDesignation').innerHTML = designation;
-document.getElementById('userProductChoice').innerHTML = productType;
-document.getElementById('userFeedback').innerHTML = feedback;
-
-// display div element to be visible only after the user clicks on the submit button
-document.getElementById('userInfo').style.display = 'block';
 
 // implement key press to submit feedback
 document.addEventListener('keydown', function(event){
