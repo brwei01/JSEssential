@@ -17,7 +17,6 @@ function checkCountValue() {
     } else if (count === 20) {
         alert("Your post gained 20 followers! Keep it up!")
     }
-
 }
 
 function reset() {
