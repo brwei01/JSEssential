@@ -1,3 +1,6 @@
+function submitFeedback() {
+    alert('Thank you for your valuable feedback.');
+}
 
 // fetch
 const username = document.getElementById('name').value;
@@ -9,9 +12,6 @@ const productType = document.getElementById('productType').value;
 const feedback = document.getElementById('feedbackText').value;
 
 const submitButton = document.getElementById('submitBtn');
-function submitFeedback() {
-    alert('Thank you for your valuable feedback.');
-}
 submitButton.onclick = submitFeedback;
 
 
