@@ -26,7 +26,7 @@ function submitFeedback() {
 
 // implement button click to submit feedback
 const submitButton = document.getElementById('submitBtn');
-submitButton.onclick = submitFeedback();
+submitButton.onclick = submitFeedback;
 
 // implement key press to submit feedback
 document.addEventListener('keydown', function(event){
