@@ -9,6 +9,7 @@ function submitFeedback() {
     const designation = document.getElementById('designation').value;
     const productType = document.getElementById('productType').value;
     const feedback = document.getElementById('feedbackText').value;
+    const userExperience = document.getElementById('userExperienceText').value;
 
     // pop up message
     alert('Thank you for your valuable feedback.');
@@ -21,6 +22,7 @@ function submitFeedback() {
     document.getElementById('userDesignation').innerHTML = designation;
     document.getElementById('userProductChoice').innerHTML = productType;
     document.getElementById('userFeedback').innerHTML = feedback;
+    document.getElementById('userExperience').innerHTML = userExperience;
 
     // display div element to be visible only after the user clicks on the submit button
     document.getElementById('userInfo').style.display = 'block';
