@@ -18,14 +18,14 @@ function calculateTotalSalaries() {
 
 // function to display employees details based on department such as the HR department
 function displayHREmployees() {
-    const hrEmployees = employees.filter(employee => employees.department === 'HR');
+    const hrEmployees = employees.filter(employee => employee.department === 'HR');
     const hrEmployeesDisplay = hrEmployees.map(employee => `<p>${employee.id}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`);
     document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay;
 }
 
 // function to display employees' details based on ID
 function findEmployeeById(employeeId) {
-    const foundEmployee = employees.find(employee => employees.id === employeeId);
+    const foundEmployee = employees.find(employee => employee.id === employeeId);
     if (foundEmployee) {
         document.getElementById('employeeDetails').innerHTML=`<p>${foundEmployee.id}: ${foundEmployee.name} - ${foundEmployee.department} - ${foundEmployee.department} - $${foundEmployee.salary}</p>`;
     } else {
