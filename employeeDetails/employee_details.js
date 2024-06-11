@@ -37,8 +37,9 @@ function findEmployeeById(employeeId) {
 // function to display employees' details based on specialization
 function findBySpecJS() {
     const foundEmployee = employees.filter(employee => employee.specialization === 'JavaScript');
-    const foundEmployeeDisplay = foundEmployee.map(employee => `<p>${employee.id}: ${employee.name} - ${employee.department} - ${employee.specialization}</p>`).join('');
+    
     if (foundEmployee) {
+        const foundEmployeeDisplay = foundEmployee.map(employee => `<p>${employee.id}: ${employee.name} - ${employee.department} - ${employee.specialization}</p>`).join('');
         document.getElementById('employeeDetails').innerHTML = foundEmployeeDisplay;
     } else {
         document.getElementById('employeeDetails').innerHTML = 'no employee has been found with this specialization';
