@@ -21,11 +21,18 @@ function addBook() {
 }
 
 function showbooks() {
-    const booksHTML = map((book, index) => `<h1>book Number: ${index + 1}</h1>
+    const booksHTML = books.map((book, index) => `<h1>book Number: ${index + 1}</h1>
         <p><strong>Book Name: </strong>${book.name}</p>
         <p><strong>Author Name: </strong>${book.authorName}</p>
         <p><strong>Book Description: </strong>${book.bookDescription}</p>
         <p><strong>No. of Pages: </strong>${book.pagesNumber}</p>`
     );
-    document.getElementById('books').innerHTML = booksHTML;
+    document.getElementById('books').innerHTML = booksHTML.join('');
+}
+
+function clearInputs() {
+    document.getElementById('bookName').value = '';
+    document.getElementById('authorName').value = '';
+    document.getElementById('bookDescription').value = '';
+    docuemnt.getElementById('pagesNumber').value = '';
 }
