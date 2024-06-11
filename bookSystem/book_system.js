@@ -34,5 +34,5 @@ function clearInputs() {
     document.getElementById('bookName').value = '';
     document.getElementById('authorName').value = '';
     document.getElementById('bookDescription').value = '';
-    docuemnt.getElementById('pagesNumber').value = '';
+    document.getElementById('pagesNumber').value = '';
 }
