@@ -40,7 +40,7 @@ function findBySpecJS() {
     // const foundEmployeeDisplay = foundEmployee.map(employee => `<p>${employee.id}: ${employee.name} - ${employee.department} - $${employee.specialization}</p>`).join('');
     if (foundEmployee) {
         // document.getElementById('employeeDetails').innerHTML = foundEmployeeDisplay;
-        `<p>${foundEmployee.id}: ${foundEmployee.name} - ${foundEmployee.department} -  $${foundEmployee.specialization}</p>`
+        document.getElementById('employeeDetails').innerHTML = `<p>${foundEmployee.id}: ${foundEmployee.name} - ${foundEmployee.department} -  $${foundEmployee.specialization}</p>`
     } else {
         document.getElementById('employeeDetails').innerHTML = 'no employee has been found with this specialization';
     }
