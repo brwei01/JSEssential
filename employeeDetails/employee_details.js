@@ -41,8 +41,7 @@ function findBySpecJS() {
     if (foundEmployee) {
         document.getElementById('employeeDetails').innerHTML = foundEmployeeDisplay;
     } else {
-        document.getElementById('employeeDetails').innerHTML = 'no employee has been found with this ID.';
+        document.getElementById('employeeDetails').innerHTML = 'no employee has been found with this specialization';
     }
-    
 }
 
