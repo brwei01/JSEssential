@@ -6,7 +6,7 @@ const employees = [
 
 // function to display all employees
 function displayEmployees() {
-    const totalEmployees = employees.map((employee, index) => `<p>${employee}.id: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
+    const totalEmployees = employees.map((employee, index) => `<p>${employee.id}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
     document.getElementById('employeeDetails').innerHTML = totalEmployees;
 }
 
@@ -19,7 +19,7 @@ function calculateTotalSalaries() {
 // function to display employees details based on department such as the HR department
 function displayHREmployees() {
     const hrEmployees = employees.filter(employee => employees.department === 'HR');
-    const hrEmployeesDisplay = hrEmployees.map((employee, index) => `<p>${employee.id}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`);
+    const hrEmployeesDisplay = hrEmployees.map(employee => `<p>${employee.id}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`);
     document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay;
 }
 
