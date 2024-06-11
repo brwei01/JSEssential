@@ -34,7 +34,7 @@ function endTest() {
     }
 
     // count total length of typed string
-    var typedString = userTypedText.length();
+    var typedString = userTypedText.length;
 
     // Display the results
     var outputDiv = document.getElementById("output");
