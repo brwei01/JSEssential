@@ -11,7 +11,8 @@ let mainCourseItem = '';
 mainCourseMenu.forEach((item, index)=>{
     mainCourseItem += `<p>Item ${index+1}: ${item}</p>`;
 });
-document.getElementById('mainCourseMenuItems').innerHTML = mainCourseItem;
+document.getElementById('maincourseMenuItems').innerHTML = mainCourseItem;
+
 
 // using for loop to manipulate dessert menu
 let dessertItem = '';
