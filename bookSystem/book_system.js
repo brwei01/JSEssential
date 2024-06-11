@@ -25,9 +25,10 @@ function showbooks() {
         <p><strong>Book Name: </strong>${book.name}</p>
         <p><strong>Author Name: </strong>${book.authorName}</p>
         <p><strong>Book Description: </strong>${book.bookDescription}</p>
-        <p id="bookDescriptionDisplay${book.index}"><strong>No. of Pages: </strong>${book.pagesNumber}</p>
+        <p><strong>No. of Pages: </strong>${book.pagesNumber}</p>
+        <button onclick="deletebook(${book.index})">Delete</button>
         <button onclick="editbook(${book.index})">Edit</button>
-        <button onclick="deletebook(${book.index})">Delete</button>`
+        <button onclick="saveChanges()">Save Changes</button>`
     );
     document.getElementById('books').innerHTML = booksHTML.join('');
 }
@@ -45,31 +46,39 @@ function deletebook(index) {
 }
 
 function editbook(index) {
+    const book = books[index];
+    document.getElementById('bookName').value = book.name;
+    document.getElementById('authorName').value = book.authorName;
+    document.getElementById('bookDescription').value = book.bookDescription;
+    document.getElementById('pagesNumber').value = book.pagesNumber;
+
+    document.getElementById('saveChanges').onclick = function() {
+        saveChanges(index);
+    };
+}
+
+function saveChanges(index) {
     const bookName = document.getElementById('bookName').value;
     const authorName = document.getElementById('authorName').value;
     const bookDescription = document.getElementById('bookDescription').value;
     const pagesNumber = parseInt(document.getElementById('pagesNumber').value);
-
     if (bookName) {
         books[index].name = bookName;
         showbooks();
         clearInputs();
-    }
-
+    } 
     if (authorName) {
         books[index].authorName = authorName;
         showbooks();
         clearInputs();
     }
-
     if (bookDescription) {
         books[index].bookDescription = bookDescription;
         showbooks();
         clearInputs();
     }
-
-    if (!isNaN(pagesNumber)) {
-        books[index].pagesNumber = pagesNumber;
+    if (pagesNumber) {
+        books[index.pagesNumber] = pagesNumber;
         showbooks();
         clearInputs();
     }
