@@ -5,6 +5,7 @@ function startTest() {
     // Set the test text
     document.getElementById("inputText").value = testText;
     // reset results and timer
+    document.getElementById("userInput").value = "";
     document.getElementById("output").innerHTML = "";
     startTime = new Date().getTime();
     // change button text and functionality
