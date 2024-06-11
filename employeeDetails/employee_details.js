@@ -20,7 +20,7 @@ function calculateTotalSalaries() {
 function displayHREmployees() {
     const hrEmployees = employees.filter(employee => employee.department === 'HR');
     const hrEmployeesDisplay = hrEmployees.map(employee => `<p>${employee.id}: ${employee.name} - ${employee.department} - $${employee.salary}</p>`).join('');
-    document.getElementById('employeesDetails').innerHTML = hrEmployeesDisplay;
+    document.getElementById('employeeDetails').innerHTML = hrEmployeesDisplay;
 }
 
 // function to display employees' details based on ID
