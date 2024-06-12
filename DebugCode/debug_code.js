@@ -7,7 +7,7 @@ function performOperation() {
         // Perform the operation
         let result = multiply(num1, num2);
         // display the res
-        displayrResult(result);
+        displayResult(result);
     } else {
         displayResult('Please enter valid numbers');
     }
