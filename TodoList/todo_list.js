@@ -8,7 +8,7 @@ let tasks = [];
 function addTask() {
     const taskText = taskInput.value.trim();
     if (taskText !== "") {
-        tasks.push({ text: taskText}); // push new task object(instance literal) into tasks array
+        tasks.push({text: taskText}); // push new task object(instance literal) into tasks array
         taskInput.value = ""; // reset
         displayTasks();
     }
@@ -21,6 +21,7 @@ function displayTasks() {
         li.innerHTML = `<input type="checkbox" id="task-${index}" ${task.completed ? "checked" : ""}>
         <label for="task-${index}">${task.text}</label>`;
         li.querySelector("input").addEventListener("change", () => toggleTask(index));
+        taskList.appendChild(li);
     });
 }
 
@@ -37,7 +38,6 @@ function clearCompletedTasks() {
 addTaskBtn.addEventListener("click", addTask);
 clearCompletedBtn.addEventListener("click", clearCompletedTasks);
 
-displayTasks();
 
 
 
