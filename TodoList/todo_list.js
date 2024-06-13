@@ -9,7 +9,7 @@ let tasks = [];
 function addTask() {
     const taskText = taskInput.value.trim();
     if (taskText !== "") {
-        tasks.push({text: taskText}); // push new task object(instance literal) into tasks array
+        tasks.push({text: taskText, completed: false}); // push new task object(instance literal) into tasks array
         taskInput.value = ""; // reset
         displayTasks();
     }
