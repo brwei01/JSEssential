@@ -15,7 +15,7 @@ const timerElement = document.getElementById('timer');
 // functions
 function generateCards() {
     for (const color of cards) {
-        const card = document.createElemnt('div');
+        const card = document.createElement('div');
         card.classList.add('card');
         card.dataset.color = color;
         card.textContent = '?';
@@ -59,4 +59,34 @@ function checkMatch() {
     }
     selectedCards = [];
 }
+
+function startGame() {
+    let timeLeft = 30;
+    startbtn.disabled = true;
+    score = 0; // reset score to 0
+    scoreElement.textContent = `Score: ${score}`;
+    startGameTimer(timeLeft);
+    cards = shuffle(colors.concat(colors));
+    selectedCards = [];
+    gameContainer.innerHTML = '';
+    generateCards();
+    gameContainer.addEventListener('click', handleCardClick);
+}
+
+function startGameTimer(timeLeft) {
+    timerElement.textContent = `Time Left: ${timeLeft}`;
+    gameInterval = setInterval(()=>{
+        timeLeft--;
+        timerElement.textContent = `Time Left: ${timeLeft}`;
+
+        if (timeLeft === 0) {
+            clearInterval(gameInterval);
+            let timeLeft = 30;
+            alert('Game Over!');
+            startbtn.disabled = false;
+        }
+    }, 1000);
+}
+
+startbtn.addEventListener('click', startGame);
 
