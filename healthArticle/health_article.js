@@ -1,5 +1,5 @@
 var xhr = new XMLHttpRequest();
-var url = './health.json';
+var url = './health_article.json';
 // prepare a GET request
 xhr.open('GET', url, true);
 // response type specification
@@ -49,6 +49,5 @@ articles.forEach(function(article){
 
     articlesDiv.appendChild(articleDiv);
 })
-
 
 xhr.send();
