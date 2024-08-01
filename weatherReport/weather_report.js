@@ -3,7 +3,7 @@ function showweatherDetails(event){
 
     const city = document.getElementById('city').value;
     const apiKey = 'ee0f6993dbd180e57541a56d7baf327e';
-    const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}';
+    const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey}';
 
     fetch(apiUrl)
         .then(response => response.json())
