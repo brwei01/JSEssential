@@ -97,7 +97,10 @@ btnSearch.addEventListener('click', searchCondition);
 
 // resetForm 
 function resetForm(){
-
+    document.getElementById("name").value = "";
+    document.querySelector('input[name="gender"]:checked').checked = false;
+    document.getElementById("age".value) = "";
+    document.getElementById("condition").value = "";
 }
 
 
