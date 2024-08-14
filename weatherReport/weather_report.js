@@ -3,8 +3,8 @@ function showweatherDetails(event){
 
     const lat = document.getElementById('lat').value;
     const lon = document.getElementById('lon').value;
-    const apiKey1 = 'ee0f6993dbd180e57541a56d7baf327e';
-    const apiKey2 = '2a39e1ab327ca8f33c34c1730c824b11';
+    const apiKey1 = 'please get the key from website';
+    const apiKey2 = 'please get the key from website';
     const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apiKey2}';
 
     fetch(apiUrl)
