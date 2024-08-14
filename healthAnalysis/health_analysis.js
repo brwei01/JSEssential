@@ -64,7 +64,7 @@ addPatientButton.addEventListener("click", addPatient);
 
 // search condition function used to search for info on specific health condition
 function searchCondition(){
-    const input = document.getElementById('condtionInput').value.toLowerCase();
+    const input = document.getElementById('conditionInput').value.toLowerCase();
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
     
